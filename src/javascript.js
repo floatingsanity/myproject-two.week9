@@ -1,11 +1,9 @@
-import { LitElement, html, css } from 'lit';
+import { LitElement, html, css, property } from 'lit-element';
 
 const logo = new URL('../assets/open-wc-logo.svg', import.meta.url).href;
 
 class ProjectTwo2 extends LitElement {
-  static properties = {
-    header: { type: String },
-  }
+  @property({ type: String }) header = 'My app';
 
   static styles = css`
     :host {
@@ -49,11 +47,6 @@ class ProjectTwo2 extends LitElement {
       margin-left: 5px;
     }
   `;
-
-  constructor() {
-    super();
-    this.header = 'My app';
-  }
 
   firstUpdated(changedProperties) {
     super.firstUpdated(changedProperties);
