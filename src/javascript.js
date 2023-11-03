@@ -116,3 +116,5 @@ class ProjectTwo2 extends LitElement {
     `;
   }
 }
+
+customElements.define('project-two-2', ProjectTwo2);
