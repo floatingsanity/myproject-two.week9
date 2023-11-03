@@ -116,20 +116,3 @@ class ProjectTwo2 extends LitElement {
     `;
   }
 }
-
-customElements.define('project-two-2', ProjectTwo2);
-
-// rollup.config.js
-import { defineConfig } from 'rollup';
-import { litcss } from 'rollup-plugin-lit-css';
-import resolve from '@rollup/plugin-node-resolve';
-import commonjs from '@rollup/plugin-commonjs';
-
-export default defineConfig({
-  input: 'src/main.js', // Update this to your entry point
-  output: {
-    file: 'dist/bundle.js', // Update this to your desired output file
-    format: 'es',
-  },
-  plugins: [litcss(), resolve(), commonjs()],
-});
