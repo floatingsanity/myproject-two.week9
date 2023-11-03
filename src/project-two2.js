@@ -55,11 +55,50 @@ class ProjectTwo2 extends LitElement {
     this.header = 'My app';
   }
 
+  firstUpdated(changedProperties) {
+    super.firstUpdated(changedProperties);
+
+    // Find the button element and add event listeners
+    const button = this.shadowRoot.querySelector('.custom-button');
+
+    button.addEventListener('click', () => {
+      // Code to run when the button is clicked
+      alert('Button clicked!');
+    });
+
+    button.addEventListener('mouseenter', () => {
+      // Code to run when the mouse enters the button
+      button.style.backgroundColor = '#ccf0ff';
+      button.style.color = '#005fa9';
+    });
+
+    button.addEventListener('mouseleave', () => {
+      // Code to run when the mouse leaves the button
+      button.style.backgroundColor = '#0077b6';
+      button.style.color = '#ffffff';
+    });
+
+    button.addEventListener('focus', () => {
+      // Code to run when the button is focused
+      button.style.backgroundColor = '#ccf0ff';
+      button.style.color = '#005fa9';
+    });
+
+    button.addEventListener('blur', () => {
+      // Code to run when the button loses focus
+      button.style.backgroundColor = '#0077b6';
+      button.style.color = '#ffffff';
+    });
+  }
+
   render() {
     return html`
       <main>
         <div class="logo"><img alt="open-wc logo" src=${logo} /></div>
         <h1>${this.header}</h1>
+
+        <!-- The button element with the "custom-button" class -->
+        <button class="custom-button">Click me</button>
 
         <p>Edit <code>src/ProjectTwo2.js</code> and save to reload.</p>
         <a
