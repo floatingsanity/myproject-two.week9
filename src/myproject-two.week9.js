@@ -124,4 +124,4 @@ class ProjectTwo2 extends LitElement {
   }
 }
 
-customElements.define('myproject-two.week9', myproject-two.week9);
+customElements.define('project-two-2', ProjectTwo2);
